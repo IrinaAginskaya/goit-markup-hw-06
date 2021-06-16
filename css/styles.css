@@ -691,8 +691,19 @@ header {
   margin-bottom: 10px;
   margin-left: 40px;
   margin-right: 40px;
-  position: relative;
 }
+
+.mdl-inp:hover {
+  border: 1px solid var(--color-of-reaction);
+  fill: var(--color-of-reaction);
+}
+.email-icon:hover {
+  fill: var(--color-of-reaction);
+}
+
+/* .email-input:hover {
+  border: 1px solid var(--color-of-reaction);
+} */
 
 .comments {
   resize: none;
@@ -747,6 +758,34 @@ header {
   display: block;
   margin-bottom: 30px;
   margin-left: 54px;
+}
+.person-input {
+  position: relative;
+}
+.person-icon {
+  fill: var(--primary-text-color);
+  position: absolute;
+  left: 53px;
+  top: 11px;
+}
+.tel-input {
+  position: relative;
+}
+
+.tel-icon {
+  position: absolute;
+  left: 53px;
+  top: 11px;
+}
+
+.email-input {
+  position: relative;
+}
+
+.email-icon {
+  position: absolute;
+  left: 53px;
+  top: 11px;
 }
 
 /* оформление оверлея на картах первой страницы  */
