@@ -691,19 +691,15 @@ header {
   margin-bottom: 10px;
   margin-left: 40px;
   margin-right: 40px;
+  padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mdl-inp:hover {
-  border: 1px solid var(--color-of-reaction);
-  fill: var(--color-of-reaction);
+.mdl-inp:hover,
+.mdl-inp:focus {
+  border-color: var(--color-of-reaction);
+  cursor: pointer;
 }
-.email-icon:hover {
-  fill: var(--color-of-reaction);
-}
-
-/* .email-input:hover {
-  border: 1px solid var(--color-of-reaction);
-} */
 
 .comments {
   resize: none;
@@ -715,6 +711,13 @@ header {
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 20px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comments:hover,
+.comments:focus {
+  border-color: var(--color-of-reaction);
+  cursor: pointer;
 }
 
 .comments::placeholder {
@@ -761,15 +764,25 @@ header {
 }
 .person-input {
   position: relative;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.person-input:hover,
+.person-input:focus {
+  fill: var(--color-of-reaction);
+}
+
 .person-icon {
-  fill: var(--primary-text-color);
   position: absolute;
   left: 53px;
   top: 11px;
 }
 .tel-input {
   position: relative;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tel-input:hover,
+.tel-input:focus {
+  fill: var(--color-of-reaction);
 }
 
 .tel-icon {
@@ -780,6 +793,12 @@ header {
 
 .email-input {
   position: relative;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-input:hover,
+.email-input:focus {
+  fill: var(--color-of-reaction);
 }
 
 .email-icon {
