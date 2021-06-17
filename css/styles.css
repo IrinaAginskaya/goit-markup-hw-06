@@ -736,6 +736,7 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
+  margin-left: 8px;
 }
 
 .chk-link {
@@ -747,6 +748,12 @@ header {
   display: block;
   color: var(--general-accent-color);
   background-color: var(--color-of-reaction);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
   width: 200px;
   height: 50px;
   background: #188ce8;
@@ -757,8 +764,15 @@ header {
   border-color: transparent;
 }
 
+.modal-btn:hover,
+.modal-btn:focus {
+  cursor: pointer;
+}
+
 .form-check {
-  display: block;
+  display: flex;
+  align-items: center;
+  position: relative;
   margin-bottom: 30px;
   margin-left: 54px;
 }
@@ -805,6 +819,33 @@ header {
   position: absolute;
   left: 53px;
   top: 11px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 3px solid var(--primary-text-color);
+  border-radius: 4px;
+}
+
+.checkbox:checked + .icon {
+  background-color: var(--color-of-reaction);
+  border-color: transparent;
+  background-image: url(../images/icheck.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 /* оформление оверлея на картах первой страницы  */
