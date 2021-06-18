@@ -131,12 +131,14 @@ header {
   color: var(--color-of-reaction);
 } */
 .link-nav {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav:hover,
 .link-nav:focus {
   color: var(--color-of-reaction);
+  transform: scale(0.9);
 }
 
 .link {
@@ -203,6 +205,7 @@ header {
   background-color: var(--color-of-reaction);
   padding: 10px 32px;
   border-radius: 4px;
+  border-color: transparent;
   display: inline-block;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -626,7 +629,8 @@ header {
 }
 
 .btn-send {
-  width: 200px;
+  display: inline-flex;
+  min-width: 200px;
   height: 50px;
   border-radius: 4px;
   border-color: transparent;
@@ -641,7 +645,8 @@ header {
   text-align: center;
   letter-spacing: 0.06em;
 
-  padding: 10px 62px 10px 29px;
+  padding: 10px 28px;
+  justify-content: center;
 
   margin-left: 12px;
 }
@@ -651,15 +656,16 @@ header {
   cursor: pointer;
 }
 
-.send-group {
+/* .send-group {
   position: relative;
   display: inline-flex;
   align-items: center;
-}
+} */
 
 .send-icon {
-  position: absolute;
-  right: 28px;
+  margin-left: 10px;
+  /* position: absolute;
+  right: 28px; */
 }
 
 /* оформление модального окна */
@@ -726,7 +732,8 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin: 40px 40px 12px 40px;
+  margin-bottom: 12px;
+  /* margin: 40px 40px 12px 40px; */
 }
 
 .form-title {
@@ -740,11 +747,11 @@ header {
   color: var(--paragraph-color);
 
   margin-bottom: 4px;
-  margin-left: 40px;
 }
 
 .form-field {
   display: block;
+  margin-bottom: 10px;
 }
 
 .mdl-inp {
@@ -752,17 +759,15 @@ header {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
   padding-left: 42px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mdl-inp:hover,
-.mdl-inp:focus {
+.mdl-inp:focus ~ .person-icon {
   border-color: var(--color-of-reaction);
   cursor: pointer;
+  fill: var(--color-of-reaction);
 }
 
 .comments {
@@ -772,13 +777,9 @@ header {
   height: 120px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 20px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.comments:hover,
 .comments:focus {
   border-color: var(--color-of-reaction);
   cursor: pointer;
@@ -806,6 +807,10 @@ header {
 .chk-link {
   color: var(--color-of-reaction);
   text-decoration: underline;
+}
+
+.modal-form {
+  padding: 40px;
 }
 
 .modal-btn {
@@ -837,52 +842,29 @@ header {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 30px;
-  margin-left: 54px;
+  margin-bottom: 20px;
 }
 .person-input {
   position: relative;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.person-input:hover,
-.person-input:focus {
-  fill: var(--color-of-reaction);
-}
 
 .person-icon {
   position: absolute;
-  left: 53px;
-  top: 11px;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .tel-input {
   position: relative;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.tel-input:hover,
-.tel-input:focus {
-  fill: var(--color-of-reaction);
-}
-
-.tel-icon {
-  position: absolute;
-  left: 53px;
-  top: 11px;
 }
 
 .email-input {
   position: relative;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.email-input:hover,
-.email-input:focus {
-  fill: var(--color-of-reaction);
-}
-
-.email-icon {
-  position: absolute;
-  left: 53px;
-  top: 11px;
 }
 
 .checkbox {
@@ -994,7 +976,7 @@ header {
 
 .list-nav-item:hover,
 .list-nav-item:focus {
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
 }
 /* .nav-current, */
 /* .nav-due-site::after, */
